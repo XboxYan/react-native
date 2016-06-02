@@ -5,8 +5,9 @@ const ios = require('./ios');
 const findAssets = require('./findAssets');
 const wrapCommands = require('./wrapCommands');
 
-const getRNPMConfig = (folder) =>
-  require(path.join(folder, './package.json')).rnpm || {};
+const getRNPMConfig = (folder) => {
+  return require(path.join(folder, './package.json')).rnpm || {};
+}
 
 /**
  * Returns project config from the current working directory
